@@ -9,7 +9,7 @@ import NotFoundPage from './features/not-found/NotFoundPage.tsx'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ToastProvider>
         <SessionProvider>
           <Routes>

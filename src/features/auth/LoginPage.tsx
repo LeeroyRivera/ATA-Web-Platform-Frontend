@@ -102,7 +102,11 @@ export default function LoginPage() {
           onAnimationEnd={() => setShake(false)}
           noValidate
         >
-          <img src="/logo.png" alt="American Textile & Apparel Inc." className={styles.logo} />
+          <img
+            src={`${import.meta.env.BASE_URL}logo.png`}
+            alt="American Textile & Apparel Inc."
+            className={styles.logo}
+          />
           <h1 className={styles.title}>Sign in</h1>
           <p className={styles.sub}>ATA Web Platform</p>
 
