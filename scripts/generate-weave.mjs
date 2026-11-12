@@ -11,6 +11,10 @@ const SIZE = CELL * REPEAT
 const BASE = '#dee1e7' // what shows between threads
 const LIGHT = '#eef0f3' // top of a thread
 const MID = '#e5e8ed'
+// Like denim, the vertical (warp) threads are a shade darker than the horizontal (weft)
+// ones. That contrast is what makes the twill diagonal visible.
+const WARP_LIGHT = '#e2e5ea'
+const WARP_MID = '#d9dde4'
 const DARK = '#d4d8df' // where a thread dives under the other
 
 let seed = 7
@@ -24,7 +28,7 @@ const defs = `
   <stop offset="0" stop-color="${MID}"/><stop offset=".45" stop-color="${LIGHT}"/><stop offset="1" stop-color="${MID}"/>
 </linearGradient>
 <linearGradient id="v" x1="0" y1="0" x2="1" y2="0">
-  <stop offset="0" stop-color="${MID}"/><stop offset=".45" stop-color="${LIGHT}"/><stop offset="1" stop-color="${MID}"/>
+  <stop offset="0" stop-color="${WARP_MID}"/><stop offset=".45" stop-color="${WARP_LIGHT}"/><stop offset="1" stop-color="${WARP_MID}"/>
 </linearGradient>
 <linearGradient id="hs" x1="0" y1="0" x2="1" y2="0">
   <stop offset="0" stop-color="${DARK}" stop-opacity="1"/><stop offset=".3" stop-color="${DARK}" stop-opacity="0"/>

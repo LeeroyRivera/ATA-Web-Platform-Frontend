@@ -3,7 +3,7 @@
   <stop offset="0" stop-color="#e5e8ed"/><stop offset=".45" stop-color="#eef0f3"/><stop offset="1" stop-color="#e5e8ed"/>
 </linearGradient>
 <linearGradient id="v" x1="0" y1="0" x2="1" y2="0">
-  <stop offset="0" stop-color="#e5e8ed"/><stop offset=".45" stop-color="#eef0f3"/><stop offset="1" stop-color="#e5e8ed"/>
+  <stop offset="0" stop-color="#d9dde4"/><stop offset=".45" stop-color="#e2e5ea"/><stop offset="1" stop-color="#d9dde4"/>
 </linearGradient>
 <linearGradient id="hs" x1="0" y1="0" x2="1" y2="0">
   <stop offset="0" stop-color="#d4d8df" stop-opacity="1"/><stop offset=".3" stop-color="#d4d8df" stop-opacity="0"/>
