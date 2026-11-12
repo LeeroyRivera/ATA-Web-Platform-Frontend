@@ -2,7 +2,7 @@
   min-height: 100vh;
   display: grid;
   grid-template-columns: minmax(380px, 46%) 1fr;
-  background: var(--fondo);
+  background: transparent;
 }
 
 /* ---- Brand panel ---- */
