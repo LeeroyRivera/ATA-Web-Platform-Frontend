@@ -1,0 +1,32 @@
+/* Design tokens taken from the mockups (bocetos/en/estilos.css). */
+:root {
+  /* Brand colors */
+  --azul: #0265cb;
+  --azul-osc: #014a96;
+  --azul-claro: #e8f1fc;
+  --rojo: #cd3333;
+  --verde: #7cc243;
+  --verde-osc: #2f8a3a;
+  --ambar: #b7791f;
+  --ambar-claro: #fdf3e1;
+
+  /* Neutrals */
+  --tinta: #1b2433;
+  --gris: #5f6b7c;
+  --gris-claro: #98a2b3;
+  --linea: #e3e8ef;
+  --fondo: #f4f6fa;
+  --fondo-suave: #fafbfc;
+  --blanco: #fff;
+
+  /* Typography */
+  --fuente: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --fuente-mono: Consolas, 'Courier New', monospace;
+
+  /* Shape and layout */
+  --radio-sm: 6px;
+  --radio: 8px;
+  --radio-lg: 12px;
+  --alto-header: 64px;
+  --ancho-max: 1240px;
+}

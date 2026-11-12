@@ -1,0 +1,39 @@
+@import './tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fuente);
+  color: var(--tinta);
+  background: var(--fondo);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+a {
+  color: var(--azul);
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.sub {
+  color: var(--gris);
+  margin-top: 4px;
+}
+
+.pie {
+  text-align: center;
+  color: var(--gris-claro);
+  font-size: 12px;
+  padding: 20px 0;
+}
