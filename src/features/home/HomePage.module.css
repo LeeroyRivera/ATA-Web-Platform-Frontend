@@ -253,3 +253,13 @@
     stroke-dashoffset: 400;
   }
 }
+
+/* Stitched seam inside the banner, like the edge of a garment label */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border: 1.5px dashed rgba(255, 255, 255, 0.22);
+  border-radius: 13px;
+  pointer-events: none;
+}
