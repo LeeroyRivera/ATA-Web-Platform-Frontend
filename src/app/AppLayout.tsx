@@ -30,6 +30,7 @@ export default function AppLayout() {
             </NavLink>
           ))}
         </nav>
+        <div className={styles.spacer} />
         <UserMenu />
       </header>
       <div className={styles.stripe} />

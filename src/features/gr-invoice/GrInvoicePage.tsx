@@ -1,4 +1,6 @@
 import { useRef, useState } from 'react'
+import { Link } from 'react-router'
+import { Check, ChevronRight } from 'lucide-react'
 import {
   ACCEPTED_EXTENSIONS,
   MAX_FILE_SIZE_MB,
@@ -43,11 +45,21 @@ export default function GrInvoicePage() {
 
   return (
     <>
-      <h1>GR Invoice Template</h1>
-      <p className="sub">
-        Upload the GRPO Excel exported from SAP. Invoice numbers and dates are pulled from
-        Smartsheet.
-      </p>
+      <nav className={styles.crumbs} aria-label="Breadcrumb">
+        <Link to="/">Home</Link>
+        <ChevronRight size={14} />
+        <span>GR Invoice Template</span>
+      </nav>
+      <div className={styles.head}>
+        <div>
+          <h1>GR Invoice Template</h1>
+          <p className="sub">
+            Upload the GRPO Excel exported from SAP. Invoice numbers and dates are pulled from
+            Smartsheet.
+          </p>
+        </div>
+        <Steps current={state.kind === 'empty' ? 0 : state.kind === 'processing' ? 1 : 2} />
+      </div>
 
       <div className={styles.dropArea}>
         {state.kind === 'empty' ? (
@@ -71,5 +83,23 @@ export default function GrInvoicePage() {
 
       {state.kind === 'ready' && <InvoiceTable result={state.result} />}
     </>
+  )
+}
+
+const STEPS = ['Upload', 'Process', 'Download']
+
+function Steps({ current }: { current: number }) {
+  return (
+    <ol className={styles.steps}>
+      {STEPS.map((label, i) => {
+        const status = i < current ? styles.done : i === current ? styles.current : ''
+        return (
+          <li key={label} className={`${styles.step} ${status}`}>
+            <span className={styles.dot}>{i < current ? <Check size={14} /> : i + 1}</span>
+            {label}
+          </li>
+        )
+      })}
+    </ol>
   )
 }

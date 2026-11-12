@@ -3,7 +3,7 @@
 }
 
 .file {
-  padding: 16px 20px;
+  padding: 18px 22px;
   display: flex;
   align-items: center;
   gap: 14px;
@@ -14,7 +14,8 @@
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background: #1d6f42;
+  background: linear-gradient(135deg, #2a8a55, #1d6f42);
+  box-shadow: 0 4px 10px rgba(29, 111, 66, 0.3);
   color: var(--blanco);
   display: grid;
   place-items: center;
@@ -66,7 +67,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  padding: 16px 20px;
+  padding: 18px 24px;
   border-bottom: 1px solid var(--linea);
 }
 
@@ -99,4 +100,101 @@
   to {
     transform: translateX(250%);
   }
+}
+
+/* ---- Page header ---- */
+.crumbs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--gris-claro);
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.crumbs a {
+  color: var(--gris);
+  font-weight: 600;
+}
+
+.crumbs a:hover {
+  color: var(--azul);
+}
+
+.crumbs span {
+  color: var(--tinta);
+  font-weight: 600;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.head > div {
+  max-width: 640px;
+}
+
+/* ---- Steps ---- */
+.steps {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px;
+  background: var(--blanco);
+  border: 1px solid rgba(16, 24, 40, 0.06);
+  border-radius: 999px;
+  box-shadow: var(--sombra-sm);
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px 6px 6px;
+  border-radius: 999px;
+  color: var(--gris-claro);
+  font-weight: 600;
+  font-size: 13px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  background: var(--fondo-suave);
+  border: 1px solid var(--linea);
+  transition: all 0.3s ease;
+}
+
+.current {
+  background: var(--azul-claro);
+  color: var(--azul);
+}
+
+.current .dot {
+  background: var(--azul);
+  border-color: var(--azul);
+  color: var(--blanco);
+  box-shadow: 0 0 0 4px rgba(2, 101, 203, 0.15);
+}
+
+.done {
+  color: var(--verde-osc);
+}
+
+.done .dot {
+  background: var(--verde-osc);
+  border-color: var(--verde-osc);
+  color: var(--blanco);
 }
