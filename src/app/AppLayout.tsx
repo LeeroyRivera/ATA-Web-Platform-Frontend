@@ -1,4 +1,5 @@
-import { NavLink, Outlet } from 'react-router'
+import { NavLink, Outlet, useLocation } from 'react-router'
+import UserMenu from './UserMenu.tsx'
 import styles from './AppLayout.module.css'
 
 const NAV_ITEMS = [
@@ -6,14 +7,13 @@ const NAV_ITEMS = [
   { to: '/gr-invoice', label: 'GR Invoice Template', end: false },
 ]
 
-// Placeholder user until the simulated session arrives (day 2).
-const USER = { name: 'Aleksander Rivera', initials: 'AR' }
-
 export default function AppLayout() {
+  const location = useLocation()
+
   return (
     <>
       <header className={styles.top}>
-        <NavLink to="/" aria-label="Home">
+        <NavLink to="/" aria-label="Home" className={styles.logoLink}>
           <img src="/logo.png" alt="American Textile & Apparel Inc." className={styles.logo} />
         </NavLink>
         <nav className={styles.nav}>
@@ -30,14 +30,14 @@ export default function AppLayout() {
             </NavLink>
           ))}
         </nav>
-        <div className={styles.user}>
-          <span>{USER.name}</span>
-          <div className={styles.avatar}>{USER.initials}</div>
-        </div>
+        <UserMenu />
       </header>
       <div className={styles.stripe} />
       <main className={styles.main}>
-        <Outlet />
+        {/* The key restarts the fade-in animation on every page change. */}
+        <div key={location.pathname} className={styles.page}>
+          <Outlet />
+        </div>
         <footer className="pie">ATA Web Platform · Internal use only</footer>
       </main>
     </>

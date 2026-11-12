@@ -1,0 +1,5 @@
+.card {
+  background: var(--blanco);
+  border: 1px solid var(--linea);
+  border-radius: var(--radio-lg);
+}

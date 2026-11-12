@@ -1,0 +1,35 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.ok {
+  background: #e6f4e8;
+  color: var(--verde-osc);
+}
+
+.pending {
+  background: var(--ambar-claro);
+  color: var(--ambar);
+}
+
+.gray {
+  background: #eef1f5;
+  color: var(--gris);
+}
+
+.blue {
+  background: var(--azul-claro);
+  color: var(--azul);
+}
+
+.error {
+  background: #fbeaea;
+  color: var(--rojo);
+}
