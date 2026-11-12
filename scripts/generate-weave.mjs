@@ -2,8 +2,8 @@
 // src/styles/global.css. Run: node scripts/generate-weave.mjs
 import { writeFileSync } from 'node:fs'
 
-const CELL = 7 // size of one thread crossing in px
-const GAP = 0.9 // space between threads
+const CELL = 10 // size of one thread crossing in px
+const GAP = 1.2 // space between threads
 const REPEAT = 8 // cells per side (twill repeats every 4; 8 adds fiber variety)
 const SIZE = CELL * REPEAT
 
@@ -54,8 +54,8 @@ for (let row = 0; row < REPEAT; row++) {
       parts.push(`<rect x="${x + half}" y="${y}" width="${w}" height="${CELL}" fill="url(#vs)"/>`)
     }
     // A couple of faint fibers along the visible thread.
-    for (let k = 0; k < 1; k++) {
-      const offset = half + 1 + rand() * (w - 2)
+    for (let k = 0; k < 2; k++) {
+      const offset = half + 1.5 + rand() * (w - 3)
       const opacity = (0.25 + rand() * 0.3).toFixed(2)
       const line = horizontalOnTop
         ? `x1="${x + 1}" y1="${(y + offset).toFixed(1)}" x2="${x + CELL - 1}" y2="${(y + offset).toFixed(1)}"`

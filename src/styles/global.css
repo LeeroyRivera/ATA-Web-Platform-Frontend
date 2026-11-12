@@ -37,7 +37,7 @@ body::after {
 
 body::before {
   background-image: url('../assets/weave-pattern.svg');
-  background-size: 56px 56px;
+  background-size: 80px 80px;
   opacity: 0.9;
 }
 
