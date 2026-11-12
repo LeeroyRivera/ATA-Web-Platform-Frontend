@@ -3,7 +3,7 @@
 // Run: node scripts/generate-dobby.mjs
 import { writeFileSync } from 'node:fs'
 
-const SPACING = 22 // distance between motifs in a row
+const SPACING = 44 // distance between motifs in a row
 const SIZE = SPACING // tile; a second motif sits in the center to make the diagonal grid
 const COLOR = '#97a3b6' // muted blue-gray, low contrast on the page background
 const OPACITY = 0.5

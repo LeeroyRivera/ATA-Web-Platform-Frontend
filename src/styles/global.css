@@ -39,7 +39,7 @@ body::after {
 body::before {
   background-image: url('../assets/dobby-pattern.svg'), url('../assets/weave-pattern.svg');
   background-size:
-    22px 22px,
+    44px 44px,
     56px 56px;
   opacity: 0.9;
 }
