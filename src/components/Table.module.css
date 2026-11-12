@@ -1,0 +1,82 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  font-size: 12px;
+  color: var(--gris);
+  font-weight: 600;
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--linea);
+  background: var(--fondo-suave);
+}
+
+.table td {
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--linea);
+}
+
+.table tbody tr {
+  transition: background-color 0.12s ease;
+}
+
+.table tbody tr:hover {
+  background: #f8faff;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.table tfoot td {
+  font-weight: 700;
+  background: var(--fondo-suave);
+  border-top: 1px solid var(--linea);
+  padding: 12px 20px;
+}
+
+.num {
+  text-align: right !important;
+  font-variant-numeric: tabular-nums;
+}
+
+.mono {
+  font-family: var(--fuente-mono);
+  font-size: 13px;
+}
+
+/* Rows appear one after another */
+.rowIn {
+  animation: row-in 0.3s ease-out backwards;
+}
+
+.skeleton {
+  display: block;
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #eef1f5 25%, #f7f9fb 50%, #eef1f5 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s linear infinite;
+}
+
+.scroll {
+  overflow-x: auto;
+}
+
+@keyframes row-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
