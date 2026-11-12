@@ -3,16 +3,20 @@
   top: 0;
   z-index: 40;
   height: var(--alto-header);
-  background: var(--blanco);
-  border-bottom: 1px solid var(--linea);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(180%) blur(12px);
+  box-shadow:
+    0 1px 0 rgba(16, 24, 40, 0.06),
+    0 4px 16px rgba(16, 24, 40, 0.05);
   display: flex;
   align-items: center;
-  padding: 0 28px;
-  gap: 28px;
+  padding: 0 32px;
+  gap: 32px;
 }
 
 .logoLink {
   flex-shrink: 0;
+  border-radius: 6px;
 }
 
 .logo {
@@ -22,45 +26,56 @@
 
 .nav {
   display: flex;
-  gap: 4px;
+  gap: 2px;
   flex: 1;
   min-width: 0;
+  padding: 4px;
+  background: var(--fondo-suave);
+  border: 1px solid var(--linea-suave);
+  border-radius: 12px;
+  width: fit-content;
+  flex-grow: 0;
+}
+
+.spacer {
+  flex: 1;
 }
 
 .link {
-  padding: 8px 14px;
-  border-radius: var(--radio-sm);
+  padding: 7px 16px;
+  border-radius: 9px;
   color: var(--gris);
   font-weight: 600;
   white-space: nowrap;
   transition:
-    background-color 0.15s ease,
-    color 0.15s ease;
+    background-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .link:hover {
-  color: var(--azul);
-  background: var(--fondo);
+  color: var(--tinta);
 }
 
 .link.active {
-  background: var(--azul-claro);
+  background: var(--blanco);
   color: var(--azul);
+  box-shadow: var(--sombra-sm);
 }
 
 .stripe {
-  height: 4px;
+  height: 3px;
   background: linear-gradient(90deg, var(--azul) 0 50%, var(--rojo) 50% 75%, var(--verde) 75%);
 }
 
 .main {
   max-width: var(--ancho-max);
   margin: 0 auto;
-  padding: 32px 28px 48px;
+  padding: 36px 32px 40px;
 }
 
 .page {
-  animation: fade-in 0.3s ease-out;
+  animation: fade-in 0.35s ease-out;
 }
 
 @media (max-width: 720px) {
@@ -70,15 +85,15 @@
   }
 
   .logo {
-    height: 28px;
+    height: 26px;
   }
 
   .link {
-    padding: 8px 10px;
+    padding: 7px 10px;
   }
 
   .main {
-    padding: 24px 16px 40px;
+    padding: 24px 16px 32px;
   }
 }
 

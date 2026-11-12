@@ -5,25 +5,28 @@
 
 .table th {
   text-align: left;
-  font-size: 12px;
-  color: var(--gris);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gris-claro);
   font-weight: 600;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-bottom: 1px solid var(--linea);
   background: var(--fondo-suave);
+  white-space: nowrap;
 }
 
 .table td {
-  padding: 12px 20px;
-  border-bottom: 1px solid var(--linea);
+  padding: 15px 24px;
+  border-bottom: 1px solid var(--linea-suave);
 }
 
 .table tbody tr {
-  transition: background-color 0.12s ease;
+  transition: background-color 0.15s ease;
 }
 
 .table tbody tr:hover {
-  background: #f8faff;
+  background: #f7faff;
 }
 
 .table tbody tr:last-child td {
@@ -34,7 +37,7 @@
   font-weight: 700;
   background: var(--fondo-suave);
   border-top: 1px solid var(--linea);
-  padding: 12px 20px;
+  padding: 15px 24px;
 }
 
 .num {
@@ -45,11 +48,12 @@
 .mono {
   font-family: var(--fuente-mono);
   font-size: 13px;
+  letter-spacing: 0.01em;
 }
 
 /* Rows appear one after another */
 .rowIn {
-  animation: row-in 0.3s ease-out backwards;
+  animation: row-in 0.35s ease-out backwards;
 }
 
 .skeleton {

@@ -102,7 +102,7 @@ export default function FileDropzone({
         onDragLeave={onDragLeave}
         onDrop={onDrop}
       >
-        <Upload size={38} className={styles.icon} />
+        <Upload size={64} className={styles.icon} />
         <b>{dragging ? 'Drop the file to upload it' : title}</b>
         <span className={styles.hint}>
           or <span className={styles.browse}>browse</span> · {accept.join(' or ')} · up to{' '}

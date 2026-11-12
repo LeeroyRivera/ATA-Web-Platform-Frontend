@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { ClipboardList, FileText, Package, Tag } from 'lucide-react'
 import { useSession } from '../../app/sessionContext.ts'
 import { useToast } from '../../components/toast/toastContext.ts'
@@ -29,16 +30,45 @@ const MODULES = [
   },
 ]
 
+function greeting(hour: number) {
+  if (hour < 12) return 'Good morning'
+  if (hour < 18) return 'Good afternoon'
+  return 'Good evening'
+}
+
 export default function HomePage() {
   const { user } = useSession()
   const toast = useToast()
   const firstName = user.name.split(' ')[0]
+  const [now] = useState(() => new Date())
+  const today = now.toLocaleDateString('en-US', {
+    weekday: 'long',
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+  })
 
   return (
     <>
-      <h1>Welcome, {firstName}</h1>
-      <p className="sub">Choose a tool to get started.</p>
+      <section className={styles.hero}>
+        <div className={styles.heroText}>
+          <span className={styles.eyebrow}>{today}</span>
+          <h1>
+            {greeting(now.getHours())}, {firstName}
+          </h1>
+          <p>Welcome to the ATA Web Platform. Choose a tool to get started.</p>
+        </div>
+        <svg className={styles.heroArt} viewBox="0 0 320 200" aria-hidden="true">
+          <path d="M40 170 C 120 170, 140 30, 280 30" />
+          <path d="M20 140 C 110 140, 150 10, 300 10" />
+          <path d="M60 196 C 140 196, 160 60, 300 60" />
+        </svg>
+      </section>
 
+      <div className={styles.sectionHead}>
+        <h2>Tools</h2>
+        <span>1 available · 3 coming soon</span>
+      </div>
       <div className={styles.modules}>
         {MODULES.map((module, index) => (
           <ModuleCard

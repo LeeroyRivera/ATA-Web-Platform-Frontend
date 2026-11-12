@@ -1,4 +1,4 @@
-/* Design tokens taken from the mockups (bocetos/en/estilos.css). */
+/* Design tokens. Brand colors come from the mockups (bocetos/en/estilos.css). */
 :root {
   /* Brand colors */
   --azul: #0265cb;
@@ -10,23 +10,33 @@
   --ambar: #b7791f;
   --ambar-claro: #fdf3e1;
 
+  /* Deep navy for hero areas */
+  --navy: #0b1f3a;
+  --navy-2: #123461;
+
   /* Neutrals */
-  --tinta: #1b2433;
-  --gris: #5f6b7c;
-  --gris-claro: #98a2b3;
-  --linea: #e3e8ef;
-  --fondo: #f4f6fa;
-  --fondo-suave: #fafbfc;
+  --tinta: #141c2b;
+  --gris: #5b6678;
+  --gris-claro: #8e99ab;
+  --linea: #e1e6ed;
+  --linea-suave: #edf0f4;
+  --fondo: #e6e9ee;
+  --fondo-suave: #f6f7f9;
   --blanco: #fff;
 
   /* Typography */
-  --fuente: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --fuente-mono: Consolas, 'Courier New', monospace;
+  --fuente: 'Segoe UI', 'Segoe UI Variable', Roboto, Helvetica, Arial, sans-serif;
+  --fuente-mono: 'Cascadia Mono', Consolas, 'Courier New', monospace;
 
-  /* Shape and layout */
-  --radio-sm: 6px;
-  --radio: 8px;
-  --radio-lg: 12px;
-  --alto-header: 64px;
+  /* Shape and depth */
+  --radio-sm: 8px;
+  --radio: 10px;
+  --radio-lg: 16px;
+  --sombra-sm: 0 1px 2px rgba(16, 24, 40, 0.05), 0 1px 3px rgba(16, 24, 40, 0.06);
+  --sombra: 0 2px 4px rgba(16, 24, 40, 0.04), 0 8px 24px rgba(16, 24, 40, 0.07);
+  --sombra-lg: 0 4px 8px rgba(16, 24, 40, 0.05), 0 20px 48px rgba(16, 24, 40, 0.14);
+
+  /* Layout */
+  --alto-header: 68px;
   --ancho-max: 1240px;
 }

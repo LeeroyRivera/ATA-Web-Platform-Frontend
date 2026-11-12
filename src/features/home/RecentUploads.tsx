@@ -27,7 +27,10 @@ export default function RecentUploads() {
 
   return (
     <section>
-      <h2 className={styles.h2}>Recent uploads</h2>
+      <div className={styles.sectionHead}>
+        <h2>Recent uploads</h2>
+        <span>Last 3 files processed</span>
+      </div>
       <Card className={`${table.scroll} ${styles.tableCard}`}>
         <table className={table.table}>
           <thead>

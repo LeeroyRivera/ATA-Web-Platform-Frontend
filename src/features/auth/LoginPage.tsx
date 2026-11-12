@@ -1,6 +1,6 @@
 import { useState, type ChangeEvent, type FormEvent } from 'react'
 import { useLocation, useNavigate } from 'react-router'
-import { CircleAlert, Eye, EyeOff } from 'lucide-react'
+import { CheckCircle2, CircleAlert, Eye, EyeOff } from 'lucide-react'
 import { login } from '../../api/index.ts'
 import { useSession } from '../../app/sessionContext.ts'
 import Button from '../../components/Button.tsx'
@@ -11,6 +11,7 @@ type Field = 'username' | 'password'
 type Errors = Partial<Record<Field, string>>
 
 const PASSWORD_MIN = 6
+const CURRENT_YEAR = new Date().getFullYear()
 
 function validate(values: Record<Field, string>): Errors {
   const errors: Errors = {}
@@ -66,6 +67,34 @@ export default function LoginPage() {
 
   return (
     <div className={styles.page}>
+      <aside className={styles.brand}>
+        <svg className={styles.brandArt} viewBox="0 0 600 600" aria-hidden="true">
+          <path d="M-40 520 C 200 520, 260 140, 640 120" />
+          <path d="M-40 470 C 220 470, 280 80, 640 60" />
+          <path d="M-40 570 C 180 570, 300 200, 640 190" />
+        </svg>
+        <div className={styles.brandInner}>
+          <span className={styles.brandTag}>American Textile &amp; Apparel</span>
+          <h2 className={styles.brandTitle}>ATA Web Platform</h2>
+          <p className={styles.brandText}>
+            Shipments, invoices and SAP documents in one place, ready in seconds.
+          </p>
+          <ul className={styles.brandList}>
+            <li>
+              <CheckCircle2 size={18} /> Commercial invoices by container
+            </li>
+            <li>
+              <CheckCircle2 size={18} /> Data pulled from SAP and Smartsheet
+            </li>
+            <li>
+              <CheckCircle2 size={18} /> Built for the ATA operations team
+            </li>
+          </ul>
+        </div>
+        <span className={styles.brandFoot}>
+          © {CURRENT_YEAR} American Textile &amp; Apparel Inc.
+        </span>
+      </aside>
       <div className={styles.wrap}>
         <form
           className={`${styles.box} ${shake ? styles.shake : ''}`}
