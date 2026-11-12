@@ -5,7 +5,7 @@ with sample data only; the .NET backend will be connected later through `src/api
 
 ## Requirements
 
-- Node.js 20 or newer (with npm)
+- Node.js 24 (with npm). The version is pinned in `.nvmrc`.
 
 ## Getting started
 
