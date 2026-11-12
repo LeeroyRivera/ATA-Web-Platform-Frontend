@@ -53,3 +53,13 @@ src/
 | `/`           | Home                |
 | `/gr-invoice` | GR Invoice Template |
 | `*`           | Not found           |
+
+## Deployment (test environment)
+
+Every push to `main` builds the app and publishes it to GitHub Pages through
+`.github/workflows/deploy-pages.yml`:
+
+https://leeroyrivera.github.io/ATA-Web-Platform-Frontend/
+
+The site is public and uses sample data only. Pages must be enabled once in the repo
+under **Settings → Pages → Source: GitHub Actions**.

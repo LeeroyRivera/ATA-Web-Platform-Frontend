@@ -14,7 +14,11 @@ export default function AppLayout() {
     <>
       <header className={styles.top}>
         <NavLink to="/" aria-label="Home" className={styles.logoLink}>
-          <img src="/logo.png" alt="American Textile & Apparel Inc." className={styles.logo} />
+          <img
+            src={`${import.meta.env.BASE_URL}logo.png`}
+            alt="American Textile & Apparel Inc."
+            className={styles.logo}
+          />
         </NavLink>
         <nav className={styles.nav}>
           {NAV_ITEMS.map((item) => (
